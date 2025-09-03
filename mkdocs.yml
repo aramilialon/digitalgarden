@@ -37,6 +37,12 @@ extra:
     - icon: fontawesome/brands/facebook
       link: https://facebook.com/giorgio.maggiolo
 
+plugins: 
+  - blog
+  - social
+  - meta
+
+
 markdown_extensions:
 #   # Material Emoji support
 #   - attr_list
