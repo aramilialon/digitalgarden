@@ -33,7 +33,7 @@ extra:
     - icon: simple/facebook
       link: https://facebook.com/giorgio.maggiolo
 
-# markdown_extensions:
+markdown_extensions:
 #   # Material Emoji support
 #   - attr_list
 #   - pymdownx.emoji:
