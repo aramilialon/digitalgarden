@@ -11,16 +11,19 @@ pool:
 
 steps:
 - task: Bash@3
+  displayName: 'Install mkdocs-material'
   inputs:
     targetType: 'inline'
     script: 'pip install mkdocs-material'
 
 - task: Bash@3
+  displayName: 'Build site with mkdocs'
   inputs:
     targetType: 'inline'
     script: 'mkdocs build'
 
 - task: SSH@0
+  displayName: 'Create remote directory'
   inputs:
     sshEndpoint: 'digitalgarden-maggiolo-net'
     runOptions: 'commands'
@@ -28,6 +31,7 @@ steps:
     readyTimeout: '20000'
 
 - task: CopyFilesOverSSH@0
+  displayName: 'Copy site files to remote server'
   inputs:
     sshEndpoint: 'digitalgarden-maggiolo-net'
     sourceFolder: './site'
@@ -38,6 +42,7 @@ steps:
     readyTimeout: '20000'
 
 - task: SSH@0
+  displayName: 'Move files to web server directory'
   inputs:
     sshEndpoint: 'digitalgarden-maggiolo-net'
     runOptions: 'commands'
