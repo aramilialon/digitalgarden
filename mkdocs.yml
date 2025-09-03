@@ -28,7 +28,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  #Syntax highlighting
+  
+  # Syntax highlighting
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -36,8 +37,14 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  
   # Content tabs
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   
