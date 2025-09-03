@@ -2,4 +2,19 @@ site_name: Giorgio's Digital Garden
 site_url: https://digitalgarden.maggiolo.net
 theme:
   name: material
-  color_mode: dark
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
