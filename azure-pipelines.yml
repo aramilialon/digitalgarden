@@ -36,3 +36,10 @@ steps:
     cleanTargetFolder: true
     cleanHiddenFilesInTarget: true
     readyTimeout: '20000'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'digitalgarden-maggiolo-net'
+    runOptions: 'commands'
+    commands: 'sudo cp -r * /var/www/html/digitalgarden/site/'
+    readyTimeout: '20000'
