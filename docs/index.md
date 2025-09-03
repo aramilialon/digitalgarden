@@ -1,5 +1,7 @@
 ---
 title: Welcome in Giorgio's Digital Garden
+hide:
+    - footer
 ---
 
 # Welcome to MkDocs
