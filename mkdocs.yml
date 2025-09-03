@@ -21,6 +21,15 @@ theme:
         name: Light mode
       # primary: blue
       # accent: deep orange
+  features:
+    - navigation.footer
+
+extra:
+  social:
+    - icon: simple/github
+      link: https://github.com/aramilialon
+    - icon: simple/linkedin
+      link: https://linkedin.com/in/giorgio-maggiolo
 
 markdown_extensions:
   # Material Emoji support
