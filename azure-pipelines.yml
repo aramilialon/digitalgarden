@@ -19,3 +19,18 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'mkdocs build'
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'mkdir -p ~/digitalgarden'
+
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'digitalgarden-maggiolo-net'
+    sourceFolder: './site'
+    contents: '**'
+    targetFolder: '~/digitalgarden'
+    cleanTargetFolder: true
+    cleanHiddenFilesInTarget: true
+    readyTimeout: '20000'
