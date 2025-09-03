@@ -1,5 +1,6 @@
 # Sources: 
 # - https://jameswillett.dev/getting-started-with-material-for-mkdocs/
+# - https://squidfunk.github.io/mkdocs-material/setup
 
 site_name: Giorgio's Digital Garden
 site_url: https://digitalgarden.maggiolo.net
@@ -23,6 +24,9 @@ theme:
       # accent: deep orange
   features:
     - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - header.autohide
 
 extra:
   social:
@@ -66,3 +70,4 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   
+copyright: &copy; 2025 Giorgio Maggiolo
