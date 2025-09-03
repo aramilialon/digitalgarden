@@ -13,7 +13,7 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'sudo apt-get -y install mkdocs-material'
+    script: 'spip install mkdocs-material'
 
 - task: Bash@3
   inputs:
