@@ -26,11 +26,11 @@ theme:
 
 extra:
   social:
-    - icon: fownawesome/brands/github-square
+    - icon: fontawesome/brands/github
       link: https://github.com/aramilialon
-    - icon: fownawesome/brands/linkedin
+    - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/giorgio-maggiolo
-    - icon: fownawesome/brands/facebook
+    - icon: fontawesome/brands/facebook
       link: https://facebook.com/giorgio.maggiolo
 
 markdown_extensions:
