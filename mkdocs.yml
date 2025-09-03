@@ -1,3 +1,6 @@
+# Sources: 
+# - https://jameswillett.dev/getting-started-with-material-for-mkdocs/
+
 site_name: Giorgio's Digital Garden
 site_url: https://digitalgarden.maggiolo.net
 theme:
@@ -33,3 +36,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  # Content tabs
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  
