@@ -94,3 +94,8 @@ User-agent: YandexAdditional
 User-agent: YandexAdditionalBot
 User-agent: YouBot
 Disallow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://digitalgarden.maggiolo.net/sitemap.xml
