@@ -7,7 +7,7 @@ hide:
 ---
 # Who am I?
 
-<img src="https://stdigitalgardenmaggiolon.blob.core.windows.net/maggiolonetimages/Personal_images/IMG_20250906_085323.jpg" alt="Alt Text" width=25% align=left valign=middle>
+<div class="imgcentered"><img src="https://stdigitalgardenmaggiolon.blob.core.windows.net/maggiolonetimages/Personal_images/IMG_20250906_085323.jpg" alt="My picture"></div>
 
 Hello there,
 

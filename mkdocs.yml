@@ -4,6 +4,7 @@
 
 site_name: Giorgio's Digital Garden
 site_url: https://digitalgarden.maggiolo.net/
+extra_css: ['assets/custom.css']
 theme:
   name: material
   logo: assets/ctm_solo_logo.png
