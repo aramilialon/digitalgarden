@@ -24,7 +24,7 @@ theme:
 
 So, except for the obvious change, this is the changed code of the content.html page:
 
-``` jinja2
+``` jinja title="content.html"
 {% include "partials/tags.html" %}
 {% include "partials/actions.html" %}
 {% if "\x3ch1" not in page.content %}
@@ -35,7 +35,20 @@ So, except for the obvious change, this is the changed code of the content.html 
 {% if page.meta and page.meta.status %}
   {% if config.extra.status %}
     {% if page.meta.status in config.extra.status %}
-      <div class="admonition info">
+      {% if page.meta.status == "draft" %}
+        <div class="admonition draft">
+        <p class="admonition-title">
+          <span>Page Status: {{ config.extra.status[page.meta.status] }}<br></span>
+          <span>Riga successiva?</span>
+          {% if config.extra.status_explanation %}
+          <span>
+            <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
+          </span>
+          {% endif %}
+        </p>
+      </div>
+      {% elif page.meta.status == "wip" %}
+        <div class="admonition wip">
         <p class="admonition-title">
           <span>Page Status: {{ config.extra.status[page.meta.status] }}</span>
           {% if config.extra.status_explanation %}
@@ -45,6 +58,29 @@ So, except for the obvious change, this is the changed code of the content.html 
           {% endif %}
         </p>
       </div>
+      {% elif page.meta.status == "done" %}
+        <div class="admonition done">
+        <p class="admonition-title">
+          <span>Page Status: {{ config.extra.status[page.meta.status] }}</span>
+          {% if config.extra.status_explanation %}
+          <span>
+            <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
+          </span>
+          {% endif %}
+        </p>
+      </div>
+      {% else %}
+        <div class="admonition info">
+        <p class="admonition-title">
+          <span>Page Status: {{ config.extra.status[page.meta.status] }}</span>
+          {% if config.extra.status_explanation %}
+          <span>
+            <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
+          </span>
+          {% endif %}
+        </p>
+      </div>
+      {% endif %}
     {% endif %}
   {% endif %}
 {% endif %}
@@ -55,3 +91,5 @@ So, except for the obvious change, this is the changed code of the content.html 
 {% include "partials/feedback.html" %}
 {% include "partials/comments.html" %}
 ```
+
+Basically I rewrote what the engine would render for each status, writing a meaningful description rather than a mere status page report.
