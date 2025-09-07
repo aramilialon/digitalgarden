@@ -1,0 +1,65 @@
+{% include "partials/tags.html" %}
+{% include "partials/actions.html" %}
+{% if "\x3ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+
+<!-- This is the snippet that displays the status -->
+{% if page.meta and page.meta.status %}
+  {% if config.extra.status %}
+    {% if page.meta.status in config.extra.status %}
+      {% if page.meta.status == "draft" %}
+        <div class="admonition draft">
+        <p class="admonition-title">
+          <span>Page Status: {{ config.extra.status[page.meta.status] }}<br></span>
+          <span>Riga successiva?</span>
+          {% if config.extra.status_explanation %}
+          <span>
+            <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
+          </span>
+          {% endif %}
+        </p>
+      </div>
+      {% elif page.meta.status == "wip" %}
+        <div class="admonition wip">
+        <p class="admonition-title">
+          <span>Page Status: {{ config.extra.status[page.meta.status] }}</span>
+          {% if config.extra.status_explanation %}
+          <span>
+            <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
+          </span>
+          {% endif %}
+        </p>
+      </div>
+      {% elif page.meta.status == "done" %}
+        <div class="admonition done">
+        <p class="admonition-title">
+          <span>Page Status: {{ config.extra.status[page.meta.status] }}</span>
+          {% if config.extra.status_explanation %}
+          <span>
+            <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
+          </span>
+          {% endif %}
+        </p>
+      </div>
+      {% else %}
+        <div class="admonition info">
+        <p class="admonition-title">
+          <span>Page Status: {{ config.extra.status[page.meta.status] }}</span>
+          {% if config.extra.status_explanation %}
+          <span>
+            <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
+          </span>
+          {% endif %}
+        </p>
+      </div>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+{{ page.content }}
+
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}
