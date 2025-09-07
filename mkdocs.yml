@@ -40,7 +40,7 @@ extra:
 plugins: 
   - blog
   - meta
-
+  - social
 
 markdown_extensions:
 #   # Material Emoji support
