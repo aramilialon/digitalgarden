@@ -25,7 +25,6 @@ theme:
       # primary: blue
       # accent: deep orange
   features:
-    - navigation.footer
     - navigation.instant
     - navigation.instant.progress
     - header.autohide
