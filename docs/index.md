@@ -1,7 +1,6 @@
 ---
 title: Home
 hide:
-    - footer
     - navigation
     - toc
 ---

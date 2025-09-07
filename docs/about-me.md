@@ -1,7 +1,6 @@
 ---
 title: Who am I?
 hide:
-    - footer
     - navigation
     - toc
 ---
