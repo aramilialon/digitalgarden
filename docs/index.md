@@ -1,10 +1,12 @@
 ---
-title: Welcome in Giorgio's Digital Garden
+title: Home
 hide:
     - footer
+    - navigation
+    - toc
 ---
 
-# Welcome to MkDocs
+# Welcome in Giorgio's Digital Garden
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
