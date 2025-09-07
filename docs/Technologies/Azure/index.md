@@ -1,12 +1,8 @@
 ---
-title: Index
+status: draft
 ---
 # Index
 
-!!! draft
-
-    questo e' un test
-    
 asdfadsf
 asdfsadfdas
 asdf

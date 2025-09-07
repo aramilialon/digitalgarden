@@ -44,6 +44,8 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.path
+    - toc.follow
+    - toc.integrate
 
 
 extra:
