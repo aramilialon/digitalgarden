@@ -43,7 +43,7 @@ extra:
       link: https://facebook.com/giorgio.maggiolo
 
 plugins: 
-  - blog
+  # - blog
   - meta
   - social
 
