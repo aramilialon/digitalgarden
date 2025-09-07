@@ -17,6 +17,12 @@ steps:
     script: 'pip install mkdocs-material'
 
 - task: Bash@3
+  displayName: 'Install mkdocs-material[imaging]'
+  inputs:
+    targetType: 'inline'
+    script: 'pip install "mkdocs-material[imaging]"'
+
+- task: Bash@3
   displayName: 'Build site with mkdocs'
   inputs:
     targetType: 'inline'
