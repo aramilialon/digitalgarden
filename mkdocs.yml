@@ -64,7 +64,7 @@ extra:
     done: Completed
   status_explanation:
     text: WUT
-    url: about-me
+    url: digital-garden
 
 plugins: 
   # - blog
