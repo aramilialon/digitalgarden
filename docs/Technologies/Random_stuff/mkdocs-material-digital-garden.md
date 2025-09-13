@@ -18,11 +18,14 @@ theme:
   custom_dir: overrides
 ```
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then the folder 'overrides' 
+
 - No matter what, the text is static, meaning that you'll always get something like this:
+
 !!! info 
     Page status
 
-So, except for the obvious change, this is the changed code of the content.html page:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So, except for the obvious change, this is the changed code of the content.html page:
 
 ``` jinja title="content.html"
 {% include "partials/tags.html" %}
@@ -39,7 +42,7 @@ So, except for the obvious change, this is the changed code of the content.html 
         <div class="admonition draft">
         <p class="admonition-title">
           <span>Page Status: {{ config.extra.status[page.meta.status] }}<br></span>
-          <span>Riga successiva?</span>
+          <span>Rough and early ideas, don't expect too much (especially finished sentences)</span>
           {% if config.extra.status_explanation %}
           <span>
             <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
@@ -50,18 +53,8 @@ So, except for the obvious change, this is the changed code of the content.html 
       {% elif page.meta.status == "wip" %}
         <div class="admonition wip">
         <p class="admonition-title">
-          <span>Page Status: {{ config.extra.status[page.meta.status] }}</span>
-          {% if config.extra.status_explanation %}
-          <span>
-            <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
-          </span>
-          {% endif %}
-        </p>
-      </div>
-      {% elif page.meta.status == "done" %}
-        <div class="admonition done">
-        <p class="admonition-title">
-          <span>Page Status: {{ config.extra.status[page.meta.status] }}</span>
+          <span>Page Status: {{ config.extra.status[page.meta.status] }}<br></span>
+          <span>Cleaned up and clarified certain sections, some are still unfinished</span>
           {% if config.extra.status_explanation %}
           <span>
             <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
@@ -70,9 +63,10 @@ So, except for the obvious change, this is the changed code of the content.html 
         </p>
       </div>
       {% else %}
-        <div class="admonition info">
+        <div class="admonition done">
         <p class="admonition-title">
-          <span>Page Status: {{ config.extra.status[page.meta.status] }}</span>
+          <span>Page Status: {{ config.extra.status[page.meta.status] }}<br></span>
+          <span>(Mostly) Done and complete, but still checked sometimes</span>
           {% if config.extra.status_explanation %}
           <span>
             <a href="{{- config.extra.status_explanation.url | url -}}">{{- config.extra.status_explanation.text -}}</a>
@@ -93,3 +87,4 @@ So, except for the obvious change, this is the changed code of the content.html 
 ```
 
 Basically I rewrote what the engine would render for each status, writing a meaningful description rather than a mere status page report.
+
