@@ -26,3 +26,5 @@ Some of the technologies/vendors I use the most are:
 * Fortinet
 * HPE
 * AWS
+
+I'm interested in technologies (IT related specifically), videogames and aviation, so please expect something connected to this here :)
