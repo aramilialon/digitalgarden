@@ -36,6 +36,14 @@ steps:
     commands: 'mkdir -p ~/digitalgarden'
     readyTimeout: '20000'
 
+- task: SSH@0
+  displayName: 'Remove everything in remote directory'
+  inputs:
+    sshEndpoint: 'digitalgarden-maggiolo-net'
+    runOptions: 'commands'
+    commands: 'sudo rm -rf ~/digitalgarden/*'
+    readyTimeout: '20000'
+
 - task: CopyFilesOverSSH@0
   displayName: 'Copy site files to remote server'
   inputs:
