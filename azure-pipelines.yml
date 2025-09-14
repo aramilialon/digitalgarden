@@ -20,7 +20,7 @@ steps:
   displayName: 'Install mkdocs-material[imaging] and dependencies'
   inputs:
     targetType: 'inline'
-    script: 'pipx install "mkdocs-material[imaging]" --install-deps && apt-get -y install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev'
+    script: 'pipx install "mkdocs-material[imaging]" && apt-get -y install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev'
 
 - task: Bash@3
   displayName: 'Build site with mkdocs'
