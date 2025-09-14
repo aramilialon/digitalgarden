@@ -1,0 +1,6 @@
+.profile-picture {
+    width: 25%;
+    display: block;
+    float: left;
+    transform: translate(-10%, 20%);
+}

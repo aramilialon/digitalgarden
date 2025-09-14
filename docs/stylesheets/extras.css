@@ -21,7 +21,6 @@
   -webkit-mask-image: var(--md-admonition-icon--draft);
           mask-image: var(--md-admonition-icon--draft);
 }
-
 .md-status--draft {
   margin-right: 0;
   margin-left: auto;
@@ -46,7 +45,6 @@
   -webkit-mask-image: var(--md-admonition-icon--wip);
           mask-image: var(--md-admonition-icon--wip);
 }
-
 .md-status--wip {
   margin-right: 0;
   margin-left: auto;
@@ -71,7 +69,6 @@
   -webkit-mask-image: var(--md-admonition-icon--done);
           mask-image: var(--md-admonition-icon--done);
 }
-
 .md-status--done {
   margin-right: 0;
   margin-left: auto;

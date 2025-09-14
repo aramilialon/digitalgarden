@@ -5,8 +5,8 @@
 site_name: Giorgio's Digital Garden
 site_url: https://digitalgarden.maggiolo.net/
 extra_css: 
-  - stylesheets/custom.css
-  - stylesheets/extras.css
+  - stylesheets/profile-picture.css
+  #- stylesheets/extras.css
 theme:
   name: material
   custom_dir: overrides
