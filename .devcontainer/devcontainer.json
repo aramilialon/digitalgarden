@@ -13,7 +13,7 @@
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
-	"postStartCommand": "pipx install mkdocs-material[imaging] --include-deps && sudo apt-get update && sudo apt-get -y install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev && git config user.name 'Giorgio Maggiolo' && git config user.email 'giorgio@maggiolo.net'" 
+	"postStartCommand": "chmod +x .devcontainer/*.sh && .devcontainer/postStart.sh", 
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
