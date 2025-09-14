@@ -33,5 +33,9 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+# Ignore .cache directory, created by mkdocs serve command
 **/.cache
 **/.cache/*
+
+# Ignore postStart_private.sh script, which containes sensitive information such as passwords that should not be in repository
+postStart_private.sh
