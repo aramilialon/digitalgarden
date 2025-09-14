@@ -52,5 +52,5 @@ steps:
   inputs:
     sshEndpoint: 'digitalgarden-maggiolo-net'
     runOptions: 'commands'
-    commands: 'sudo cp -r ./digitalgarden/* /var/www/html/digitalgarden/site/'
+    commands: 'sudo rm -rf /var/www/html/digitalgarden/site/* && sudo cp -r ./digitalgarden/* /var/www/html/digitalgarden/site/'
     readyTimeout: '20000'
