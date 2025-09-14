@@ -5,13 +5,15 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
 	"features": {
-		"ghcr.io/devcontainers-extra/features/mkdocs:2": {},
 		"ghcr.io/devcontainers/features/azure-cli:1": {},
-		"ghcr.io/robbert229/devcontainer-features/opentofu:1": {}
-	}
+		"ghcr.io/robbert229/devcontainer-features/opentofu:1": {},
+		"ghcr.io/devcontainers/features/python:1": {}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
+
+	"postStartCommand": "pipx install mkdocs-material[imaging] --include-deps && apt-get update && apt-get -y install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev"
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
