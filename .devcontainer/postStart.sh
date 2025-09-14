@@ -1,4 +1,4 @@
 #!/bin/bash
 
-./postStart_private.sh
-./postStart_public.sh
+./.devcontainer/postStart_private.sh
+./.devcontainer/postStart_public.sh
