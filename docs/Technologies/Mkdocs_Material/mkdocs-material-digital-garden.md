@@ -88,3 +88,12 @@ theme:
 
 Basically I rewrote what the engine would render for each status, writing a meaningful description rather than a mere status page report.
 
+## Error 404 page not used
+
+I completely forgot that we're talking about, at the end of the day, of a static HTML website... I had to configure the error page in Apache (yep, I don't like nor use [wherever possible] Nginx) with the directive:
+
+``` aconf title="/etc/apache2/sites-enabled/digitalgarden.maggiolo.net.conf"
+[...]
+ErrorDocument 404 /404.html
+[...]
+```
