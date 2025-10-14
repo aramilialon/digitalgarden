@@ -4,3 +4,9 @@
     float: left;
     transform: translate(-10%, 20%);
 }
+image-article {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
