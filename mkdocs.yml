@@ -49,6 +49,7 @@ theme:
     - content.code.copy
 
 
+
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -57,6 +58,12 @@ extra:
       link: https://linkedin.com/in/giorgio-maggiolo
     - icon: fontawesome/brands/facebook
       link: https://facebook.com/giorgio.maggiolo
+  analytics:
+    provider: matomo
+    property: matomo 
+  # consent:
+  #   title: Cookie consent
+  #   description: We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
 
   status:
     draft: Draft
