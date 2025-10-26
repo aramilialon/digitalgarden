@@ -1,5 +1,5 @@
 ---
-status: draft
+status: wip
 title: Automating Certbot with Azure DNS zones
 ---
 # Azure Public DNS Zones & Certbot: yeeeeah......
