@@ -1,6 +1,6 @@
 ---
 title: My personal lab
-status: done
+status: wip
 ---
 # My personal lab
 
@@ -19,6 +19,10 @@ Currently my personal lab is pretty simple, made with:
         * 1x SEAGATE ST1000LM024 - 1TB
     * **OS**: Debian 13 (Trixie) + Proxmox CE 9.0.11
 * [Mikrotik RB4011iGS+5HacQ2HnD](https://mikrotik.com/product/rb4011igs_5hacq2hnd_in)
+
+## Networking
+
+_TODO: describe the network configuration_
 
 ## VMs
 
