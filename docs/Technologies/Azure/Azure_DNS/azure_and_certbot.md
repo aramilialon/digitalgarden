@@ -13,7 +13,7 @@ The idea therefore is to:
 * [Configure certbot to use Azure](#configure-certbot-to-use-azure)
 * [See everything in action](#see-everything-in-action)
 
-_A small detail:_ everything is written for Debian, in case of other distro... Well... Look for yourself or start using the **right** distro :squinting-face-with-tongue:
+_A small detail:_ everything is written for Debian, in case of other distro... Well... Look for yourself or start using the **right** distro :smile:
 
 ## Install apache and certbot
 
@@ -26,20 +26,51 @@ Once the commands ran, you should have installed Apache with its default page an
 
 ## Create the DNS zones using CNAME structure
 
+The idea is to have a third-level domain that will be modified by certbot (authorized via an [application registration](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app)) and, in the main domain, a bunch of CNAMEs that redirect to the third-level domain in order to obtain this behavior:
+
 ``` mermaid
 sequenceDiagram
-    participant Proxy
-    participant Let's Encrypt
-    participant maggiolo.net
-    participant acmechallange.maggiolo.net
-    Proxy->>acmechallange.maggiolo.net: TXT _acme-challange.digitalgarden.maggiolo.net.acmechallange.maggiolo.net <VALUE>
-    acmechallange.maggiolo.net-->>Proxy: <Done>
-    #destroy Proxy
     Let's Encrypt->>+maggiolo.net:TXT _acme-challange.digitalgarden.maggiolo.net
     maggiolo.net->>+acmechallange.maggiolo.net:TXT _acme-challange.digitalgarden.maggiolo.net.acmechallange.maggiolo.net
     acmechallange.maggiolo.net-->>-maggiolo.net:<VALUE>
     maggiolo.net-->>-Let's Encrypt:<VALUE> 
 ```
+(here I have used this domain website as example, the real domains _might_ be different)
+
+In my environment everything is done via Terraform (and for Azure using the [AVM](https://azure.github.io/Azure-Verified-Modules/indexes/terraform/) modules), so those are the configuration:
+
+``` terraform title="acmechallenge.maggiolo.net"
+module "acmechallenge_maggiolo_net_dns" {
+    source              = "Azure/avm-res-network-dnszone/azurerm"
+    name                = "acmechallenge.maggiolo.net"
+    resource_group_name = module.avm-res-resources-resourcegroup.name
+    tags                = var.tags
+}
+```
+
+``` terraform title="maggiolo.net"
+module "maggiolo_net_dns" {
+    source              = "Azure/avm-res-network-dnszone/azurerm"
+    name                = "maggiolo.net"
+    resource_group_name = module.avm-res-resources-resourcegroup.name
+    # [...]
+    ns_records          = {
+        # [...]
+        "acmechallenge_maggiolo_net" = {
+            name                = "acmechallenge"
+            ttl                 = 3600
+            records             = module.acmechallenge_maggiolo_net_dns.name_servers
+            zone_name           = "maggiolo.net"
+            resource_group_name = module.avm-res-resources-resourcegroup.name
+            tags                = var.tags
+        }
+    }
+    tags                = var.tags
+}
+```
+
+Since the _acmechallenge.maggiolo.net_ will be automatically managed, I won't create any specific record in there, but only the definition + configure in the second-level domain the nameservers.
+Doing so I can guarantee that Certbot can work autonomously without touching precious records in the second-level; furthermore, I still keep track of what domains are managed automatically and which are, instead, manually updated.
 
 ## Configure certbot to use Azure
 
