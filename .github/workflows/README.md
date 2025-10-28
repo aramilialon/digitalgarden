@@ -2,7 +2,12 @@
 
 ## Deploy Workflow
 
-The `deploy.yml` workflow automatically builds and deploys the Digital Garden site to the remote web server when changes are pushed to the `main` branch.
+The `deploy.yml` workflow automatically builds and deploys the Digital Garden site to the remote web server when changes are pushed to the `main` branch. It can also be triggered manually from the GitHub Actions tab.
+
+### Triggers
+
+- **Automatic**: Runs on every push to the `main` branch
+- **Manual**: Can be triggered manually via GitHub Actions UI (Actions → Build and Deploy Digital Garden → Run workflow)
 
 ### Required GitHub Secrets
 
