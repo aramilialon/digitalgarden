@@ -70,7 +70,7 @@ Lift increases with the square of velocity—doubling your speed quadruples your
 4. **Expansion** - Hot gases expand through turbine
 5. **Exhaust** - High-velocity gases exit (thrust!)
 
-**Newton's Third Law:**
+**Newton's Third Law** (Isaac Newton):
 > For every action, there is an equal and opposite reaction.
 
 The engine accelerates air backward → aircraft is pushed forward.
@@ -117,8 +117,15 @@ The foundation of aerodynamics:
 3. Faster air = lower pressure (Bernoulli)
 4. Pressure difference creates lift
 
-**Simplified (but not entirely accurate):**
-Think of it as the wing "deflecting" air downward. By Newton's third law, if the wing pushes air down, the air pushes the wing up!
+**Simplified Explanation:**
+The wing "deflects" air downward, creating a downward force on the air. By Newton's third law, if the wing pushes air down, the air pushes the wing up! This is a more intuitive way to think about lift generation.
+
+**The Complete Picture:**
+In reality, lift comes from a combination of factors:
+- Pressure differential (Bernoulli's principle)
+- Airflow deflection (Newton's laws)
+- Circulation around the wing
+All these are different ways of describing the same physical phenomenon.
 
 ## Angle of Attack
 

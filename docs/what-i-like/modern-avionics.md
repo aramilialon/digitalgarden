@@ -353,7 +353,7 @@ As someone working in IT, I see many parallels:
 - Change control is rigorous
 
 **Reliability:**
-Aviation software has failure rates measured in probabilities like 10^-9 per flight hour—far more stringent than typical commercial software!
+Aviation software has failure rates measured in probabilities like 10⁻⁹ (one in a billion) per flight hour—far more stringent than typical commercial software!
 
 ### Systems Integration
 
