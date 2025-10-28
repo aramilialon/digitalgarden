@@ -1,12 +1,3 @@
-```
-   ____  _                  _     _       ____            _            
-  / ___|| |__   __ _ _ __ (_) __| | __ _/ ___| __ _ _ __|  | ___ _ __ 
- | |  _ | '_ \ / _` | '_ \| |/ _` |/ _` | |  _ / _` | '__| |/ _ \ '_ \ 
- | |_| || | | | (_| | | | | | (_| | (_| | |_| | (_| | |  |   <  __/ | | |
-  \____||_| |_|\__,_|_| |_|_|\__,_|\__,_|\____|\__,_|_|  |_|\_\___|_| |_|
-                                                                          
-```
-
 <div align="center">
 
 # 🌱 Giorgio's Digital Garden 🌱
@@ -195,7 +186,6 @@ Want to chat? Find me on:
 
 - 💼 [LinkedIn - Giorgio Maggiolo](https://linkedin.com/in/giorgio-maggiolo)
 - 🐙 [GitHub - @aramilialon](https://github.com/aramilialon)
-- 📘 [Facebook](https://facebook.com/giorgio.maggiolo)
 - 🌐 [Digital Garden](https://digitalgarden.maggiolo.net/)
 
 ---
