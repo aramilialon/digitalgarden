@@ -30,7 +30,7 @@ jobs:
     - name: Build site with mkdocs
       run: mkdocs build
     
-    - name: Create remote directory
+    - name: Prepare remote directory
       uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.SSH_HOST }}
@@ -39,16 +39,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           mkdir -p ~/digitalgarden
-    
-    - name: Remove everything in remote directory
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.SSH_PORT }}
-        script: |
-          sudo rm -rf ~/digitalgarden/*
+          rm -rf ~/digitalgarden/*
     
     - name: Copy site files to remote server
       uses: appleboy/scp-action@v0.1.7
@@ -70,4 +61,4 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           sudo rm -rf /var/www/html/digitalgarden/site/*
-          sudo cp -r ~/digitalgarden/* /var/www/html/digitalgarden/site/
+          sudo cp -r ./digitalgarden/* /var/www/html/digitalgarden/site/
