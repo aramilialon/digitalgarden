@@ -17,7 +17,7 @@ This is **Giorgio's Digital Garden** - a personal knowledge base and documentati
 - `mkdocs.yml` - MkDocs configuration file (site settings, theme, plugins, markdown extensions)
 - `azure-pipelines.yml` - CI/CD pipeline for building and deploying to production
 - `README.md` - Default Azure DevOps template (minimal content, mostly TODOs)
-- `.gitignore` - Excludes .cache, .terraform files, and postStart_private.sh
+- `.gitignore` - Excludes .cache, site/, .terraform files, and postStart_private.sh
 
 ### Key Directories
 - `docs/` - All Markdown content files (~332 total lines across 9 files)
@@ -188,7 +188,7 @@ Before committing changes:
 2. **No broken links**: Check build output for warnings
 3. **Content renders**: Verify HTML output in `site/` directory
 4. **Config is valid**: YAML syntax errors will break the build
-5. **Git status clean**: Ensure `site/` and `.cache/` are not staged (they're gitignored)
+5. **Git status clean**: Ensure `site/`, `.cache/`, and `postStart_private.sh` are not staged (they're gitignored)
 
 ## Important Notes
 

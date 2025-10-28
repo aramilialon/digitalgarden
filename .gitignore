@@ -39,3 +39,5 @@ terraform.rc
 
 # Ignore postStart_private.sh script, which containes sensitive information such as passwords that should not be in repository
 **/postStart_private.sh
+# Ignore mkdocs build output
+site/
