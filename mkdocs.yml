@@ -4,6 +4,8 @@
 
 site_name: Giorgio's Digital Garden
 site_url: https://digitalgarden.maggiolo.net/
+repo_url: https://github.com/aramilialon/digitalgarden
+repo_name: aramilialon/digitalgarden
 extra_css: 
   - stylesheets/profile-picture.css
   - stylesheets/extras.css
