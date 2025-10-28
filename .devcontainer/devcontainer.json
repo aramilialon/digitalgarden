@@ -7,9 +7,6 @@
 		"ghcr.io/devcontainers/features/python:1": {}
 	},
 	"postStartCommand": "chmod +x .devcontainer/*.sh && .devcontainer/postStart.sh", 
-	"runArgs": [
-    	"--network=default_network"
-	]
 	"customizations": {
 		"vscode": {
 			"extensions": ["redhat.ansible", "ankitbko.vscode-pull-request-azdo", "ms-azuretools.vscode-azureappservice", "ms-azuretools.vscode-azure-mcp-server", "ms-vscode.azure-repos", "ms-azuretools.vscode-azureresourcegroups", "phplasma.csv-to-table", "mhutchie.git-graph", "ms-azuretools.vscode-azure-github-copilot", "hashicorp.hcl", "hashicorp.terraform", "ms-kubernetes-tools.vscode-kubernetes-tools", "shd101wyy.markdown-preview-enhanced", "bierner.markdown-preview-github-styles", "cardinal90.multi-cursor-case-preserve", "pdconsec.vscode-print", "mechatroner.rainbow-csv", "4ops.terraform", "maurodesouza.vscode-simple-readme", "tfsec.tfsec", "redhat.vscode-yaml"]
