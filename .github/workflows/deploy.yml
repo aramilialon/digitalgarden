@@ -1,0 +1,68 @@
+name: Build and Deploy Digital Garden
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    
+    - name: Install pipx
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install pipx
+        python -m pipx ensurepath
+    
+    - name: Install mkdocs-material[imaging] and dependencies
+      run: pipx install "mkdocs-material[imaging]" --include-deps
+    
+    - name: Build site with mkdocs
+      run: mkdocs build
+    
+    - name: Prepare remote directory
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: |
+          mkdir -p ~/digitalgarden
+          rm -rf ~/digitalgarden/*
+    
+    - name: Copy site files to remote server
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        source: "./site/*"
+        target: "~/digitalgarden"
+        strip_components: 1
+    
+    - name: Move files to web server directory
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: |
+          sudo rm -rf /var/www/html/digitalgarden/site/*
+          sudo cp -r ./digitalgarden/* /var/www/html/digitalgarden/site/
