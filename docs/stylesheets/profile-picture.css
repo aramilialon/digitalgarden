@@ -4,9 +4,15 @@
     float: left;
     transform: translate(-10%, 20%);
 }
-image-article {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+
+.image-article {
+  text-align: center; /* center inline content */
+  margin: 1rem 0;     /* vertical spacing */
+}
+
+.image-article img {
+  display: block;     /* allow margin auto */
+  margin: 0 auto;     /* horizontal center */
+  max-width: 75%;     /* scale down on large screens */
+  height: auto;       /* preserve aspect ratio */
 }
