@@ -139,7 +139,7 @@ Every commit to `main` triggers an automated deployment pipeline:
 4. 📦 Deploy fresh build
 5. 🎉 Live in seconds!
 
-The magic happens in `.github/workflow/deploy.yml` - fully automated, zero-touch deployment to [digitalgarden.maggiolo.net](https://digitalgarden.maggiolo.net/).
+The magic happens in `.github/workflows/deploy.yml` - fully automated, zero-touch deployment to [digitalgarden.maggiolo.net](https://digitalgarden.maggiolo.net/).
 
 ---
 
