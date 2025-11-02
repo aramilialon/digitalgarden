@@ -96,7 +96,7 @@ This digital garden is built with powerful, modern tools:
 |------------|---------|
 | **[MkDocs](https://www.mkdocs.org/)** | Static site generator |
 | **[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)** | Beautiful, responsive theme |
-| **[Azure Pipelines](https://azure.microsoft.com/en-us/products/devops/pipelines/)** | CI/CD automation |
+| **[Github Actions](https://docs.github.com/en/actions)** | CI/CD automation |
 | **[Python 3.12](https://www.python.org/)** | Core runtime |
 | **Markdown** | Content authoring |
 
@@ -124,7 +124,6 @@ digitalgarden/
 ├── overrides/              # 🎭 Theme customizations
 │   └── partials/           # Custom HTML components
 ├── mkdocs.yml             # ⚙️ Site configuration
-├── azure-pipelines.yml    # 🚀 CI/CD pipeline
 └── README.md              # 📖 You are here!
 ```
 
@@ -140,7 +139,7 @@ Every commit to `main` triggers an automated deployment pipeline:
 4. 📦 Deploy fresh build
 5. 🎉 Live in seconds!
 
-The magic happens in `azure-pipelines.yml` - fully automated, zero-touch deployment to [digitalgarden.maggiolo.net](https://digitalgarden.maggiolo.net/).
+The magic happens in `.github/workflows/deploy.yml` - fully automated, zero-touch deployment to [digitalgarden.maggiolo.net](https://digitalgarden.maggiolo.net/).
 
 ---
 
