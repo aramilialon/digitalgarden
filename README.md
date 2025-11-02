@@ -193,7 +193,7 @@ Want to chat? Find me on:
 
 Copyright © 2025 Giorgio Maggiolo
 
-This project is my personal knowledge base. Feel free to use it as inspiration for your own digital garden! 🌱
+Please refer to the very restrictive license file LICENSE for any use! 🌱
 
 ---
 
