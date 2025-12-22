@@ -13,9 +13,9 @@ Digital Gardening is about organizing your thoughts in your website / wiki / kno
 
 The term "digital garden" uses the gardening metaphor intentionally. Unlike a blog (which is more like a **stream** of content flowing past), a garden is a place you **tend over time**:
 
-- **Seeds** 🌱 — Early ideas, rough notes, initial thoughts that may grow into something more
-- **Budding** 🌿 — Ideas that are taking shape but still need nurturing and development
-- **Evergreen** 🌳 — Mature, well-developed content that continues to be relevant and is regularly maintained
+- **Seeds** — Early ideas, rough notes, initial thoughts that may grow into something more
+- **Budding** — Ideas that are taking shape but still need nurturing and development
+- **Evergreen** — Mature, well-developed content that continues to be relevant and is regularly maintained
 
 This approach embraces the idea that knowledge is never truly "finished." Pages can be revisited, refined, and expanded as understanding deepens.
 
