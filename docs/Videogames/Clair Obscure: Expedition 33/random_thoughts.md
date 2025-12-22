@@ -7,7 +7,7 @@ Whatever is written here contains **spoilers** therefore if you haven't played t
 
 # Act III.... Really?
 I really feel like the third act of this title should have never existed.
-I literally cried during the celebrations of the Paintress defeat, after the expeditionnaires return to Lumiere, and I felt that the game was already completed since the main objective was achieved. But no, they had to add the "murder" of every people in the *world* because.... Because.
+I literally cried during the celebrations of the Paintress defeat, after the expeditionaries return to Lumiere, and I felt that the game was already completed since the main objective was achieved. But no, they had to add the "murder" of every people in the *world* because.... Because.
 IMHO it really doesn't add any value, after almost 20 hours the game could be already finished, there was no need to *diluite the brooth* (as we say in Italy, meaning to make something longer than it should be) with something that I felt completely out of the narration. The new story had nothing to do with what you've been told until then and it feels as something attached for covering some plot holes.... BOH!
 
 # Is it really a turn-based game?
