@@ -1,5 +1,7 @@
 name: Build and Deploy Digital Garden
 
+runs-on: self-hosted
+
 on:
   push:
     branches:
