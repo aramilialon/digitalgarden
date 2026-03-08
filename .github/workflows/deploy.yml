@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     
     permissions:
       contents: read
@@ -22,11 +22,16 @@ jobs:
       with:
         python-version: '3.12'
     
+    - name: Install system libraries for mkdocs-material imaging
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
+    
     - name: Install pipx
       run: |
         python -m pip install --upgrade pip
         python -m pip install pipx
-        python -m pipx ensurepath
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
     
     - name: Install mkdocs-material[imaging] and dependencies
       run: pipx install "mkdocs-material[imaging]" --include-deps
