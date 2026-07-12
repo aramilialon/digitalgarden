@@ -36,8 +36,7 @@ jobs:
     - name: Install mkdocs-material[imaging] and dependencies
       run: |
         pipx install "mkdocs-material[imaging]" --include-deps
-        pipx install mkdocs-document-dates
-
+        pipx inject mkdocs-material mkdocs-document-dates
     
     - name: Build site with mkdocs
       run: mkdocs build
