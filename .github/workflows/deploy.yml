@@ -34,7 +34,9 @@ jobs:
         echo "$HOME/.local/bin" >> $GITHUB_PATH
     
     - name: Install mkdocs-material[imaging] and dependencies
-      run: pipx install "mkdocs-material[imaging]" --include-deps
+      run: |
+        pipx install "mkdocs-material[imaging]" --include-deps
+        pipx inject mkdocs-material mkdocs-document-dates
     
     - name: Build site with mkdocs
       run: mkdocs build
