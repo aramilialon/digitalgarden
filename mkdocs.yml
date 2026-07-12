@@ -80,7 +80,14 @@ plugins:
   - meta
   - social
   - search
-
+  - document-dates:
+      show_author: false
+      exclude:
+        - "index.md"
+        - "about-me.md"
+        - "contact.md"
+        - "projects.md"
+        
 markdown_extensions:
   - attr_list
   - meta
@@ -120,4 +127,4 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   
-copyright: Copyright &copy; 2025 Giorgio Maggiolo
+copyright: Copyright &copy; 2025-2026 Giorgio Maggiolo
