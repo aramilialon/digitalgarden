@@ -72,7 +72,7 @@ extra:
     wip: Work in Progress
     done: Completed
   status_explanation:
-    text: WUT
+    text: "WUT is this?"
     url: digital-garden
 
 plugins: 
@@ -87,6 +87,7 @@ plugins:
         - "about-me.md"
         - "contact.md"
         - "projects.md"
+        - "*/index.md"
         
 markdown_extensions:
   - attr_list
